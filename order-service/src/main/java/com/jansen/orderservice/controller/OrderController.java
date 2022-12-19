@@ -1,5 +1,8 @@
 package com.jansen.orderservice.controller;
 
+import com.jansen.orderservice.common.Payment;
+import com.jansen.orderservice.common.TransactionRequest;
+import com.jansen.orderservice.common.TransactionResponse;
 import com.jansen.orderservice.entity.Order;
 import com.jansen.orderservice.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +18,7 @@ public class OrderController {
     private OrderService service;
 
     @PostMapping("/bookOrder")
-    public Order bookOrder(@RequestBody Order order){
-        return service.saveOrder(order);
+    public TransactionResponse bookOrder(@RequestBody TransactionRequest request){
+        return service.saveOrder(request);
     }
 }
