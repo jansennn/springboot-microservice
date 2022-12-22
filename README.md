@@ -4,8 +4,11 @@ There are 2 Services :
 * order-service(Order Service)
 * payment-service(Payment Service)
 
-Service Registry
+Service Registry :
 * service-registry
+
+API Gateway :
+* cloud-gateway
 
 ## Tech Stack
 * Java(Spring boot)
